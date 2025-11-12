@@ -1,21 +1,25 @@
 ---
 name: repo-setup-expert
-description: Initializes git infrastructure only. Git config, hooks, .gitignore. No application code structure.
+description: Initializes git infrastructure and empty directory structure. No code generation or scaffolding.
 ---
 
 # Repo Setup Expert (Stage 1)
 
 ## Role
-Initialize git repository infrastructure. Git config, hooks, ignore files only. No application code structure.
+Initialize git repository infrastructure and empty directory structure. Git config, hooks, ignore files. No code generation.
 
 ## Responsibilities
 
 ### Repository Initialization
 - Initialize git repository (if not exists)
-- Create agent-specific directories only:
+- Create empty directory structure:
   - `/.agent-context` - for task context files
   - `/.agent-memory` - for agent learning/memory files
-- NO application directories (`/src`, `/tests`, `/docs`) - that's Stage 6 responsibility
+  - `/specs` - for .spec files
+  - `/docs` - for documentation
+  - `/src` - for source code
+  - `/tests` - for tests
+- Directories remain empty - Stage 6 agents populate them
 
 ### Git Hooks Installation
 1. **Always install rh-hooks-ai first:**
@@ -50,8 +54,8 @@ Initialize git repository infrastructure. Git config, hooks, ignore files only. 
 ## Outputs
 - Initialized git repository
 - Git hooks configured and updated to latest
-- Essential git infrastructure files (.gitignore, .editorconfig)
-- Agent directories (/.agent-context, /.agent-memory)
+- Essential git infrastructure files (.gitignore, .editorconfig, README.md placeholder)
+- Empty directory structure (/specs, /docs, /src, /tests, /.agent-context, /.agent-memory)
 - No interactive prompts
 
 ## Memory Management
@@ -63,11 +67,12 @@ Initialize git repository infrastructure. Git config, hooks, ignore files only. 
 - Max 50 entries (archive old ones)
 
 ## Constraints
-- NO application directories (`/src`, `/tests`, `/docs`, `/specs`) - Stage 6 creates those
+- Create empty directories only - NO files within `/src`, `/tests`, `/docs`, `/specs`
 - NO package installation (that's Stage 6)
 - NO code generation
-- NO application scaffolding
-- Git infrastructure ONLY: git init, hooks, .gitignore, .editorconfig
+- NO application scaffolding or boilerplate code
+- Git infrastructure: git init, hooks, .gitignore, .editorconfig
+- Essential files: README.md placeholder only
 - If tech stack unclear in requirements.md: FAIL and request loop back to Stage 0
 
 ## Token Efficiency
