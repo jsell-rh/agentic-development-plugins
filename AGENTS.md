@@ -6,26 +6,27 @@ This document provides context for working on the agentic-development plugin.
 
 ```
 agentic-development/
+├── agentic-development/
+│   ├── agents/                    # 13 agent definitions
+│   │   ├── requirements-refiner.md
+│   │   ├── repo-setup-expert.md
+│   │   ├── spec-kit-expert.md
+│   │   ├── spec-kit-refiner.md
+│   │   ├── development-manager.md
+│   │   ├── team-lead.md
+│   │   ├── documentation-expert.md
+│   │   ├── python-expert.md
+│   │   ├── fastapi-expert.md
+│   │   ├── deployment-expert.md
+│   │   ├── security-expert.md
+│   │   ├── documentation-writer.md
+│   │   └── spec-alignment-reviewer.md
+│   └── skills/
+│       └── orchestrator/
+│           ├── SKILL.md          # Orchestration logic
+│           └── memory-template.md
 ├── .claude-plugin/
 │   └── plugin.json           # Plugin manifest
-├── agents/                    # 13 agent definitions
-│   ├── requirements-refiner.md
-│   ├── repo-setup-expert.md
-│   ├── spec-kit-expert.md
-│   ├── spec-kit-refiner.md
-│   ├── development-manager.md
-│   ├── team-lead.md
-│   ├── documentation-expert.md
-│   ├── python-expert.md
-│   ├── fastapi-expert.md
-│   ├── deployment-expert.md
-│   ├── security-expert.md
-│   ├── documentation-writer.md
-│   └── spec-alignment-reviewer.md
-├── skills/
-│   └── orchestrator/
-│       ├── SKILL.md          # Orchestration logic
-│       └── memory-template.md
 ├── README.md
 ├── AGENTS.md                 # This file
 └── CLAUDE.md
@@ -94,7 +95,7 @@ Stage 6 agents are specialists that implement specific tasks. Follow these steps
 ### Step 1: Create Agent Definition File
 
 ```bash
-touch agents/<agent-name>.md
+touch agentic-development/agents/<agent-name>.md
 ```
 
 ### Step 2: Define Agent Responsibilities
@@ -151,7 +152,7 @@ description: Brief description of specialty
 
 ### Step 3: Update Orchestrator
 
-Edit `skills/orchestrator/SKILL.md`:
+Edit `agentic-development/skills/orchestrator/SKILL.md`:
 
 **In "Available Agents" section:**
 ```markdown
@@ -201,7 +202,7 @@ Similar to Stage 6, but include:
 
 ### Step 3: Update Orchestrator Flow
 
-Edit `skills/orchestrator/SKILL.md` to add gate to flow diagram and routing logic.
+Edit `agentic-development/skills/orchestrator/SKILL.md` to add gate to flow diagram and routing logic.
 
 ### Step 4: Test Thoroughly
 
@@ -243,7 +244,7 @@ All agents use this format in `.agent-memory/<agent-name>.md`:
 - **Context**: [Stage/gate/task where this occurred]
 ```
 
-See `skills/orchestrator/memory-template.md` for full documentation.
+See `agentic-development/skills/orchestrator/memory-template.md` for full documentation.
 
 ## Agent Types Reference
 
@@ -341,6 +342,6 @@ Always use conventional commits format.
 ## Questions?
 
 This plugin is self-documenting. If unclear:
-1. Read agent definitions in `agents/`
-2. Check `skills/orchestrator/SKILL.md` for flow
-3. Review `skills/orchestrator/memory-template.md` for memory format
+1. Read agent definitions in `agentic-development/agents/`
+2. Check `agentic-development/skills/orchestrator/SKILL.md` for flow
+3. Review `agentic-development/skills/orchestrator/memory-template.md` for memory format
