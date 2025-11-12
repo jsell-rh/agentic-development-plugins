@@ -39,11 +39,15 @@ Stage 4: Development Manager
 Stage 5-6 Loop (for each unchecked task in roadmap):
   ├─ Team Lead: Create context file
   ├─ Documentation Expert: Augment with latest docs
+  ├─ Gate 6: Documentation-Spec Alignment
+  │   ├─ FAIL (Modify Spec) → Loop to Stage 2
+  │   ├─ FAIL (Clarify) → Loop to Stage 0
+  │   └─ PASS (or Override) → Continue
   ├─ Specialized Agent: Execute task
-  ├─ Team Lead: Check off task
   └─ Gate 7: Spec Alignment Reviewer
       ├─ FAIL → Fix and retry task
-      └─ PASS → Next task (or complete if done)
+      ├─ PASS → Team Lead creates atomic commit
+      └─ Team Lead checks off task → Next task (or complete if done)
 ```
 
 ## Responsibilities
@@ -69,6 +73,7 @@ Use TodoWrite to track:
 - Stage 4: development-manager
 - Stage 5: team-lead
 - Stage 6 (Pre-processor): documentation-expert (fetches latest docs from internet)
+- Gate 6: documentation-spec-alignment (validates specs against latest docs)
 - Stage 6 (Specialists): python-expert, fastapi-expert, deployment-expert, security-expert, documentation-writer
 - Gate 7: spec-alignment-reviewer
 
@@ -100,12 +105,16 @@ Parse agent output for PASS/FAIL:
 2. Team Lead reports: "python-expert - .agent-context/<task>-<timestamp>.md"
 3. Orchestrator invokes Documentation Expert (pre-processor) with file path
 4. Documentation Expert augments file with latest docs from internet
-5. Orchestrator invokes Specialist (python-expert, fastapi-expert, etc.) with file path
-6. Specialist completes work
-7. Orchestrator invokes Spec Alignment Reviewer (Gate 7)
-8. If PASS: Team Lead creates atomic commit
-9. Team Lead checks off task in roadmap.md
-10. Repeat for next task
+5. Orchestrator invokes Documentation-Spec Alignment (Gate 6) with file path
+6. Gate 6 checks for discrepancies:
+   - PASS: Continue to specialist
+   - FAIL: User decides → Stage 0, Stage 2, or override to continue
+7. Orchestrator invokes Specialist (python-expert, fastapi-expert, etc.) with file path
+8. Specialist completes work
+9. Orchestrator invokes Spec Alignment Reviewer (Gate 7)
+10. If PASS: Team Lead creates atomic commit
+11. Team Lead checks off task in roadmap.md
+12. Repeat for next task
 
 ### Completion Detection
 Project complete when:

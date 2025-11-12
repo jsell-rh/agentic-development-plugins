@@ -80,7 +80,10 @@ graph TD
     H --> I{More Tasks?}
     I -->|Yes| J[Create Task Context]
     J --> K[Documentation Expert<br/>Fetch Latest Docs]
-    K --> L{Task Type?}
+    K --> K2{Gate 6: Doc-Spec Alignment}
+    K2 -->|FAIL: Modify Spec| D
+    K2 -->|FAIL: Clarify| A
+    K2 -->|PASS| L{Task Type?}
     L -->|Python| M[Python Expert]
     L -->|FastAPI| N[FastAPI Expert]
     L -->|Deployment| O[Deployment Expert]
@@ -103,6 +106,7 @@ graph TD
     %% Gates in red
     style B fill:#f96,stroke:#333,stroke-width:2px
     style E fill:#f96,stroke:#333,stroke-width:2px
+    style K2 fill:#f96,stroke:#333,stroke-width:2px
     style R fill:#f96,stroke:#333,stroke-width:2px
 
     %% Agents in blue
@@ -127,6 +131,7 @@ graph TD
 ### Gates (Quality Control)
 - **Gate 0: requirements-refiner** - Validates requirements for completeness
 - **Gate 3: spec-kit-refiner** - Validates specs are generative
+- **Gate 6: documentation-spec-alignment** - Validates specs against latest library docs, flags discrepancies
 - **Gate 7: spec-alignment-reviewer** - Validates code matches specs
 
 ### Process Agents

@@ -7,7 +7,7 @@ This document provides context for working on the agentic-development plugin.
 ```
 agentic-development/
 ├── agentic-development/
-│   ├── agents/                    # 13 agent definitions
+│   ├── agents/                    # 14 agent definitions
 │   │   ├── requirements-refiner.md
 │   │   ├── repo-setup-expert.md
 │   │   ├── spec-kit-expert.md
@@ -15,6 +15,7 @@ agentic-development/
 │   │   ├── development-manager.md
 │   │   ├── team-lead.md
 │   │   ├── documentation-expert.md
+│   │   ├── documentation-spec-alignment.md
 │   │   ├── python-expert.md
 │   │   ├── fastapi-expert.md
 │   │   ├── deployment-expert.md
@@ -251,6 +252,7 @@ See `agentic-development/skills/orchestrator/memory-template.md` for full docume
 ### Gates (Validators)
 - **Gate 0**: requirements-refiner - Validates requirements clarity
 - **Gate 3**: spec-kit-refiner - Validates spec completeness
+- **Gate 6**: documentation-spec-alignment - Validates specs against latest library docs
 - **Gate 7**: spec-alignment-reviewer - Validates code-spec alignment
 
 ### Process Agents (Orchestration)
