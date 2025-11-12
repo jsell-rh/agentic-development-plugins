@@ -81,19 +81,34 @@ Use TodoWrite to track:
 - Maximum 3 loops per gate (prevent infinite)
 - Sequential execution only
 - Must respect gate decisions (no exceptions)
-- Token-efficient (file paths not content)
+- Token-efficient: provide file paths only, no verbose prompts
+- Agent invocations: minimal prompts (file references only)
 - **Zero decision-making authority outside process execution**
+- **Do not instruct agents how to work** - their definitions already contain instructions
 
 ## Execution Pattern
 
 ### Invoking Agents
-Use Task tool with appropriate agent names:
+Agents have detailed instructions in their definitions. Orchestrator provides inputs only:
+
+**Format:**
 ```
 Task(
-  subagent_type="requirements-refiner",
-  prompt="Validate requirements: [reference to requirements]"
+  subagent_type="agent-name",
+  prompt="[Input file paths and minimal context only]"
 )
 ```
+
+**Examples:**
+- Gate: `subagent_type="requirements-refiner", prompt="requirements.md"`
+- Process Agent: `subagent_type="repo-setup-expert", prompt="requirements.md"`
+- Context-based: `subagent_type="python-expert", prompt=".agent-context/task-123.md"`
+
+**Do NOT:**
+- Give instructions (agent definitions already have them)
+- Explain what the agent should do
+- Provide implementation guidance
+- Add narrative or context beyond file references
 
 ### Handling Gate Results
 Parse agent output for PASS/FAIL:
