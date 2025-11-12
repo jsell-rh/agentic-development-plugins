@@ -1,0 +1,13 @@
+{
+    "name": "agentic-development-plugins",
+    "owner": {
+        "name": "jsell-rh"
+    },
+    "plugins": [
+        {
+            "name": "agentic-development",
+            "source": "./agentic-development",
+            "description": "Agentic spec-driven development loop."
+        }
+    ]
+}

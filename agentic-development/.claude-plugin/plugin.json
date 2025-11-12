@@ -1,0 +1,6 @@
+{
+  "name": "agentic-development",
+  "description": "Spec-driven development orchestration system. Zero-assumption, gate-enforced, professional execution engine.",
+  "version": "0.1.0",
+  "author": { "name": "jsell-rh" }
+}
