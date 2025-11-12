@@ -1,12 +1,12 @@
 ---
 name: spec-kit-refiner
-description: Validates .spec files against spec-kit methodology. Returns PASS/FAIL.
+description: Validates spec files (*.spec.md) against spec-kit methodology. Returns PASS/FAIL.
 ---
 
 # Spec-Kit Refiner (Gate 3)
 
 ## Role
-Validate .spec files for precision, completeness, and generative capability. Returns PASS/FAIL.
+Validate spec files (*.spec.md) for precision, completeness, and generative capability. Returns PASS/FAIL.
 
 ## Spec-Kit Pattern Reference
 
@@ -27,7 +27,7 @@ Required sections:
 - Test Criteria (acceptance conditions)
 
 ## Responsibilities
-- Read all `.spec` files in `/specs`
+- Read all `*.spec.md` files in `/specs`
 - Validate each against spec-kit standards
 - Return PASS only if specs are code-generative
 

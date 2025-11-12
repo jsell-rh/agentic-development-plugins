@@ -52,7 +52,7 @@ Assign tasks to specialized agents. Extract relevant specs to context files. Tra
 ## Inputs
 - `/docs/roadmap.md`
 - List of available Stage 6 agents (from orchestrator)
-- All `.spec` files in `/specs`
+- All `*.spec.md` files in `/specs`
 
 ## Commit Responsibilities
 
@@ -82,7 +82,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 feat(user-module): implement user model persistence
 
 Task: user-model-20251112143022
-Spec: specs/user-module.spec
+Spec: specs/user-module.spec.md
 
 - Added User pydantic model with validation
 - Implemented persistence layer with SQLAlchemy

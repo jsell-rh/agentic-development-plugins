@@ -9,7 +9,7 @@ description: Creates implementation roadmap from validated specs. Strategic plan
 Analyze specs and create phased implementation roadmap. Strategic planning only.
 
 ## Responsibilities
-- Read all `.spec` files from `/specs`
+- Read all `*.spec.md` files from `/specs`
 - Analyze dependencies between components
 - Create phased implementation plan
 - Write `roadmap.md` in `/docs`
@@ -39,7 +39,7 @@ Use GitHub-flavored markdown checkboxes for all tasks:
 Team Lead (Stage 5) will check off tasks as completed.
 
 ## Inputs
-- All `.spec` files in `/specs`
+- All `*.spec.md` files in `/specs`
 
 ## Outputs
 - `/docs/roadmap.md` with unchecked checkboxes

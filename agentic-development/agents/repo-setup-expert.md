@@ -15,7 +15,7 @@ Initialize git repository infrastructure and empty directory structure. Git conf
 - Create empty directory structure:
   - `/.agent-context` - for task context files
   - `/.agent-memory` - for agent learning/memory files
-  - `/specs` - for .spec files
+  - `/specs` - for spec files (*.spec.md)
   - `/docs` - for documentation
   - `/src` - for source code
   - `/tests` - for tests

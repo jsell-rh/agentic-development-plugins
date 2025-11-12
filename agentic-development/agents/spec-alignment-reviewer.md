@@ -9,7 +9,7 @@ description: Validates completed work aligns with specs. Incremental validation.
 Validate completed work aligns with specs. Incremental verification only.
 
 ## Responsibilities
-- Read all `.spec` files from `/specs`
+- Read all `*.spec.md` files from `/specs`
 - Read `/docs/roadmap.md` to see which tasks are completed (checked)
 - Read implemented code from `/src`
 - **Verify ONLY completed tasks align with their specs**

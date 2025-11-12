@@ -131,7 +131,7 @@ graph TD
 
 ### Process Agents
 - **Stage 1: repo-setup-expert** - Initializes repo structure, git hooks
-- **Stage 2: spec-kit-expert** - Generates .spec files from requirements
+- **Stage 2: spec-kit-expert** - Generates spec files (*.spec.md) from requirements
 - **Stage 4: development-manager** - Creates phased roadmap
 - **Stage 5: team-lead** - Assigns tasks, creates atomic commits
 
@@ -147,7 +147,7 @@ graph TD
 
 ```
 your-project/
-├── specs/                    # .spec files (spec-kit methodology)
+├── specs/                    # Spec files (*.spec.md, spec-kit methodology)
 ├── docs/                     # Documentation
 │   ├── roadmap.md           # Phased implementation plan
 │   ├── architecture.md      # System architecture
