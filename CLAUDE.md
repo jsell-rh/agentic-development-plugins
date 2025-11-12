@@ -151,4 +151,4 @@ User knows their domain. Agent doesn't. Failing fast prevents wasted work.
 
 ## Contact
 
-For questions or issues, file an issue at: https://github.com/rh-jsell/agentic-development
+For questions or issues, file an issue at: https://github.com/jsell-rh/agentic-development

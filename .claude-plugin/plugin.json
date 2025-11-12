@@ -2,9 +2,9 @@
   "name": "agentic-development-plugins",
   "version": "0.1.0",
   "description": "Spec-driven development orchestration system. Zero-assumption, gate-enforced, professional execution engine.",
-  "author": "rh-jsell",
+  "author": "jsell-rh",
   "agents": "./agents/",
   "skills": "./skills/",
-  "homepage": "https://github.com/rh-jsell/agentic-development-plugins",
+  "homepage": "https://github.com/jsell-rh/agentic-development-plugins",
   "license": "Apache-2.0"
 }
