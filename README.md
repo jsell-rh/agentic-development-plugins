@@ -15,20 +15,49 @@ Agentic Development is a Claude Code plugin that orchestrates software developme
 
 ## Installation
 
+Open Claude Code, and type `/plugin`
 ```bash
-# Clone or copy plugin to Claude Code plugins directory
-cp -r agentic-development ~/.claude/plugins/
-
-# Or for project-specific use
-cp -r agentic-development ./.claude/plugins/
+> /plugin 
+╭─────────────────────────────────────────────────────────────────────────────────────╮
+│ Plugins                                                                             │
+│                                                                                     │
+│   1. Browse and install plugins                                                     │
+│   2. Manage and uninstall plugins                                                   │
+│ ❯ 3. Add marketplace                                                                │
+│   4. Manage marketplaces                                                            │
+╰─────────────────────────────────────────────────────────────────────────────────────╯
+   Press ↑↓ to navigate · Enter to select · Esc to exit
 ```
+
+Navigate to `3. Add marketplace` and press `Enter`.
+
+Type in `jsell-rh/agentic-development-plugins` and press `Enter`.
+
+```bash
+╭─────────────────────────────────────────────────────────────────────────────────────╮
+│ Add Marketplace                                                                     │
+│                                                                                     │
+│ Enter marketplace source:                                                           │
+│ Examples:                                                                           │
+│  • owner/repo (GitHub)                                                              │
+│  • git@github.com:owner/repo.git (SSH)                                              │
+│  • https://example.com/marketplace.json                                             │
+│  • ./path/to/marketplace                                                            │
+│                                                                                     │
+│ jsell-rh/agentic-development-plugins                                                │
+╰─────────────────────────────────────────────────────────────────────────────────────╯
+   Enter to add · Esc to cancel
+```
+
+Follow the rest of the prompts and then **restart Claude Code**.
+
 
 ## Usage
 
 Invoke the orchestrator skill:
 
 ```
-Use the orchestrator skill to build [your project description]
+Please use the Orchestrator skill to perform development against <my-requirements.md>.
 ```
 
 The orchestrator will guide you through the development cycle, asking clarifying questions at gates.
